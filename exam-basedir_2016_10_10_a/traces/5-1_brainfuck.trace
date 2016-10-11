@@ -1,0 +1,92 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r2p10.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Mon Oct 10 20:23:51 PDT 2016
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161010/dtse
+
+Git returned an error (Code 1)
+ 
+= Standard error =====================================================
+xcode-select: error: no developer tools were found at '/Applications/Xcode.app', and no install could be requested (perhaps no UI is present), please install manually from 'developer.apple.com'.
+ 
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161010/dtse
+
+Git returned an error (Code 1)
+ 
+= Standard error =====================================================
+xcode-select: error: no developer tools were found at '/Applications/Xcode.app', and no install could be requested (perhaps no UI is present), please install manually from 'developer.apple.com'.
+ 
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161010/dtse
+
+= Git history ==================================================================
+$> git -C /var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user log --pretty='%H - %an, %ad : %s'
+557ffc760ba9c8f57feecad917393d3997e5552e - Daniel Tse, Mon Oct 10 20:17:21 2016 -0700 : 04: final final push'
+1a6593c8342d8bd56a8f4c75d41c184c1efd72c1 - Daniel Tse, Mon Oct 10 20:15:41 2016 -0700 : 04: final push
+baca756fae4e0eba8a956c83f7bc5360b91d6fd5 - Daniel Tse, Mon Oct 10 19:45:02 2016 -0700 : 03: final push
+6e0ee7b8781267e9f329bce29ddd2c0cd9735a2d - Daniel Tse, Mon Oct 10 17:57:43 2016 -0700 : 02: final push
+56329fe2f62c9306320149ad6418caf149eef0d4 - Daniel Tse, Mon Oct 10 17:39:41 2016 -0700 : 01: final push
+17fdbe39308beb53ad4628dd2df886ed51ae5076 - Daniel Tse, Mon Oct 10 17:22:18 2016 -0700 : 01: final push
+1a6f79ab1660cf03920925825dcee24f7773170b - Daniel Tse, Mon Oct 10 17:06:56 2016 -0700 : 00: final submission
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  2106 Oct 10 20:23 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 10 20:23 aff_last_param
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 10 20:23 do_op
+drwxr-xr-x  3 deepthought  deepthought   102 Oct 10 20:23 only_z
+drwxr-xr-x  3 deepthought  deepthought   102 Oct 10 20:23 sort_int_tab
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 10 20:23 tab_mult
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 10 20:23 ulstr
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/aff_last_param:
+total 32
+-rw-r--r--  1 deepthought  deepthought  12288 Oct 10 20:23 .aff_last_param.c.swp
+-rw-r--r--  1 deepthought  deepthought   1129 Oct 10 20:23 aff_last_param.c
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/do_op:
+total 32
+-rw-r--r--  1 deepthought  deepthought  12288 Oct 10 20:23 .do_op.c.swp
+-rw-r--r--  1 deepthought  deepthought   1323 Oct 10 20:23 do_op.c
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/only_z:
+total 8
+-rw-r--r--  1 deepthought  deepthought  70 Oct 10 20:23 only_z.c
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/sort_int_tab:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1179 Oct 10 20:23 sort_int_tab.c
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/tab_mult:
+total 32
+-rw-r--r--  1 deepthought  deepthought  1913 Oct 10 20:23 tab_mult.c
+-rwxr-xr-x  1 deepthought  deepthought  8648 Oct 10 20:23 test
+
+/var/folders/xz/8q7zynps38576tnr6jbg38y40000gp/T/tmpDSVVgg/user/ulstr:
+total 32
+-rw-r--r--  1 deepthought  deepthought  12288 Oct 10 20:23 .ulstr.c.swp
+-rw-r--r--  1 deepthought  deepthought   1255 Oct 10 20:23 ulstr.c
+ 
+= brainfuck ====================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================
