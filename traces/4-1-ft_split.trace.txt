@@ -1,0 +1,103 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r3p25.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Tue Oct 11 12:00:22 PDT 2016
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/exam_20161011/dtse
+
+= Git history ==================================================================
+$> git -C /var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user log --pretty='%H - %an, %ad : %s'
+ae4943029a114b837bd75a6a8219f7534ac914ee - Exam 42, Tue Oct 11 11:59:36 2016 -0700 : 04: final push
+5ac763ec4578c3402c997f7e4e0f4179bef80dd3 - Exam 42, Tue Oct 11 10:55:04 2016 -0700 : itoa: switching int to long to handle largest negative int
+b630829301e10f3efcc0dfa78256d138dd531d63 - Exam 42, Tue Oct 11 10:51:05 2016 -0700 : 04: final push?
+84cc18368fbe63f5d387402f963bd6dc6622c46a - Exam 42, Tue Oct 11 10:02:46 2016 -0700 : 03: final push
+4d5b0f95458b969b654c9539f4863819fa5fb075 - Exam 42, Tue Oct 11 09:41:56 2016 -0700 : 02: bleh
+ab4521185a59853d523330c5c0f102f1cea3595c - Exam 42, Tue Oct 11 09:22:21 2016 -0700 : 01: removed exec
+2367fbdfe91cb14c3ff87aee359d8f19a2e638d5 - Exam 42, Tue Oct 11 09:21:34 2016 -0700 : 01: final push
+6087b1af92f91bdc1e17c8d2dad687cffe8f7fc9 - Exam 42, Tue Oct 11 09:11:56 2016 -0700 : 00: final push
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  2311 Oct 11 12:00 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 aff_last_param
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 ft_itoa
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 ft_range
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 ft_split
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 max
+drwxr-xr-x  4 deepthought  deepthought   136 Oct 11 12:00 ulstr
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/aff_last_param:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1096 Oct 11 12:00 aff_last_param.c
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/ft_itoa:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1756 Oct 11 12:00 ft_itoa.c
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/ft_range:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1397 Oct 11 12:00 ft_range.c
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/ft_split:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  2129 Oct 11 12:00 ft_split.c
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/max:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1110 Oct 11 12:00 max.c
+
+/var/folders/vb/0r2x0h9171q9w6704nc98gkr0000gp/T/tmpCV8XY5/user/ulstr:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 11 12:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1251 Oct 11 12:00 ulstr.c
+ 
+= ft_split =====================================================================
+$> gcc -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./00junmst3qgbhm13i7w4zl5y ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./qnslbct2lidcd8xl1lelbq95 "
+	 
+	
+   "
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./o0n6flbyhnifmjuz1chqx29j "
+ 	
+   "
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./zdzk0mn67hr40t33c16x9w41 "sbvGmMBqPAt5JhEa0"
+Command './zdzk0mn67hr40t33c16x9w41 "sbvGmMBqPAt5JhEa0"' got killed by a Segmentation fault (Signal -11)
+Grade: 0
+
+= Final grade: 0 ===============================================================
