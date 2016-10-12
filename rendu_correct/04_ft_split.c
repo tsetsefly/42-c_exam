@@ -93,12 +93,10 @@ char **ft_split(char *str)
 
 	while (is_spacetabnew(str[i++]))
 		;
-	i = 0;
+	str = &str[i - 1];
 	while (str[i])
 		i++;
 	len = i;
-	i = 0;
-	str = &str[i - 1];
 	wc = word_count(str, len);
 	array = create_matrix(str, wc, len);
 	return (array = fill_matrix(array, str, len));
@@ -108,9 +106,10 @@ char **ft_split(char *str)
 // {
 // 	int i = 0;
 // 	int j;
-// 	char input[60] = " 				asdf \n\tasdf \nqwerty m mm		\0";
+// 	char input[60] = "asdf \n\tasdf \nqwerty m mm\0";
 // 	char **array;
 
+// 	printf("*****\nINPUT->%s<-END\n*****\n", input);
 // 	array = ft_split(input);
 // 	while (array[i])
 // 	{

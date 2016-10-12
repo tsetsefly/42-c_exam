@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+// #include <stdio.h>
 
 char *strrev(char *array)
 {
@@ -35,7 +36,7 @@ char *strrev(char *array)
 	return (array);
 }
 
-int	num_digits(int nbr)
+int	num_digits(long nbr)
 {
 	int digits = 0;
 
@@ -79,3 +80,10 @@ char	*ft_itoa(int nbr)
 	array[i] = '\0';
 	return (strrev(array));
 }
+
+// int main ()
+// {
+// 	int num = -2147483648;
+// 	printf("num: %d\nft_itoa: %s\n", num, ft_itoa(num));
+// 	return (0);	
+// }
