@@ -7,3 +7,4 @@
 4. install sublime from /nfs/munki_repo/pkgs/apps/SublimeText/
   1. can access this by opening Finder --> Go --> Go to Folder (or [command] + [shift] + G)
 5. add right click to the mouse by System Preferences --> Mouse
+6. if you need to use Vim, add syntax highlighting with ```:syntax on```
