@@ -9,4 +9,4 @@
 5. Add right click to the mouse by System Preferences --> Mouse
 6. If you need to use Vim, add syntax highlighting with ```:syntax on```
 7. Don't forget to clean up your testing code, execs, and libraries before submission
-8. Don't forget to push your final code to vogsphere before typing ```grademe```
+8. Don't forget to push your final code in the ```rendu/<test question>``` directory to vogsphere before typing ```grademe```
