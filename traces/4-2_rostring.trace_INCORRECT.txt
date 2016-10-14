@@ -1,0 +1,69 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z1r3p14.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Thu Oct 13 23:48:15 PDT 2016
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161014/dtse3
+
+= Git history ==================================================================
+$> git -C /var/folders/nt/h6pqkhwx10g64d60nv662vrc0000gp/T/tmpVfzBKk/user log --pretty='%H - %an, %ad : %s'
+a8e049e9ad1747c7b3750dca36f8e13d8f72c94a - tsetsefly, Thu Oct 13 23:48:07 2016 -0700 : test
+31160b36b584f1d241f0fe2b58e24fa7a70410ba - tsetsefly, Thu Oct 13 23:34:57 2016 -0700 : test
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/nt/h6pqkhwx10g64d60nv662vrc0000gp/T/tmpVfzBKk/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  575 Oct 13 23:48 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought  136 Oct 13 23:48 ft_list_remove_if
+drwxr-xr-x  3 deepthought  deepthought  102 Oct 13 23:48 rostring
+
+/var/folders/nt/h6pqkhwx10g64d60nv662vrc0000gp/T/tmpVfzBKk/user/ft_list_remove_if:
+total 16
+-rw-r--r--  1 deepthought  deepthought  1080 Oct 13 23:48 ft_list.h
+-rw-r--r--  1 deepthought  deepthought  1298 Oct 13 23:48 ft_list_remove_if.c
+
+/var/folders/nt/h6pqkhwx10g64d60nv662vrc0000gp/T/tmpVfzBKk/user/rostring:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2637 Oct 13 23:48 rostring.c
+ 
+= rostring =====================================================================
+$> gcc -Wextra -Wall -Werror rostring.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./4ujnjjwkup0idj8sgk798m2z 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./9ui7z3gaj0rovpiker3s33r0 
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./sn40fq5pv0jddpggg0nrv6t3 "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+--- user_output_test3	2016-10-13 23:48:17.000000000 -0700$
++++ test3.output	2016-10-13 23:48:17.000000000 -0700$
+@@ -1 +1 @@$
+-$
++salut$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
