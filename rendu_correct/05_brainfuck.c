@@ -15,13 +15,14 @@
 
 void				brainfuck(char *input)
 {
-	unsigned char	stack[4096];
-	size_t			i;
-	size_t			ptr;
+	unsigned char	stack[2048];
+	unsigned char	*ptr = stack;
+	size_t			i = 0;
 	size_t			loop;
 
+	while (i < 2048)
+		stack[i++] = 0;
 	i = 0;
-	ptr = 0;
 	while (input[i])
 	{
 		if (input[i] == '>')
@@ -29,45 +30,39 @@ void				brainfuck(char *input)
 		else if (input[i] == '<')
 			--ptr;
 		else if (input[i] == '+')
-			stack[ptr]++;
+			++*ptr;
 		else if (input[i] == '-')
-			stack[ptr]--;
+			--*ptr;
 		else if (input[i] == '.')
-			write(1, stack + ptr, 1);
-		else if (input[i] == '[')
+			write(1, ptr, 1);
+		else if (input[i] == '[' && *ptr == 0)
 		{
-			if (stack[ptr] == 0)
+			loop = 0;
+			i++;
+			while (input[i])
 			{
-				loop = 0;
+				if (input[i] == '[')
+					loop++;
+				if (input[i] == ']' && loop == 0)
+					break ;
+				else if (input[i] == ']')
+					loop--;
 				i++;
-				while (input[i])
-				{
-					if (input[i] == '[')
-						loop++;
-					if (input[i] == ']' && loop == 0)
-						break ;
-					else if (input[i] == ']')
-						loop--;
-					i++;
-				}
 			}
 		}
-		else if (input[i] == ']')
+		else if (input[i] == ']' && *ptr)
 		{
-			if (stack[ptr])
+			loop = 0;
+			i--;
+			while (input[i])
 			{
-				loop = 0;
+				if (input[i] == ']')
+					loop++;
+				if (input[i] == '[' && loop == 0)
+					break ;
+				else if (input[i] == '[')
+					loop--;
 				i--;
-				while (input[i])
-				{
-					if (input[i] == ']')
-						loop++;
-					if (input[i] == '[' && loop == 0)
-						break ;
-					else if (input[i] == '[')
-						loop--;
-					i--;
-				}
 			}
 		}
 		i++;

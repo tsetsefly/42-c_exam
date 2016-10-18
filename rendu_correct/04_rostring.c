@@ -85,10 +85,14 @@ char **fill_matrix(char **array, char *str, int len)
 
 char **rostring(char *str)
 {
+	int i = 0;
 	int wc;
 	char **array;
 	int len = 0;
 
+	while (is_spacetabnew(str[i++]))
+		;
+	str = &str[i - 1];
 	while (str[len])
 		len++;
 	wc = word_count(str, len);
@@ -98,27 +102,27 @@ char **rostring(char *str)
 
 int main (int argc, char **argv)
 {
+	int len = 0;
+	int i = 1;
+	int j;
+
 	if (argc > 1)
 	{
-		int i = 0;
-		int j;
 		char **array;
 
 		array = rostring(argv[1]);
-		while (array[i])
-			i++;
-		i--;
-		while (i > 0)
+		while(array[len])
+			len++;
+		while (i < len)
 		{
 			j = 0;
 			while (array[i][j])
 			{
-				write(1, &array[i][j], 1); 	
+				write(1, &array[i][j], 1);
 				j++;
 			}
-			// if (i != 0)
 			write(1, " ", 1);
-			i--;
+			i++;
 		}
 		j = 0;
 		while(array[0][j])
