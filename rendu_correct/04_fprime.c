@@ -13,6 +13,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/*
+	dealing with null case
+	dealing with num = 1 case
+	dealing with all other cases
+	-have an iterator counting upwards to <= number
+	-have the number divided each time to meet the iterator
+	termination condition of num = 1, else print the *
+*/
+
 int		main (int argc, char **argv)
 {
 	int		n;
