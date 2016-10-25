@@ -1,0 +1,52 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z1r4p33.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Mon Oct 24 13:46:14 PDT 2016
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161024/dtse
+
+= Git history ==================================================================
+$> git -C /var/folders/bl/1yd835n967jc3shngppdq4c00000gp/T/tmpevh5Jt/user log --pretty='%H - %an, %ad : %s'
+d7a5f4edbd7cffb507df638c23cf9ffaf7c8ba86 - tsetsefly, Mon Oct 24 13:45:59 2016 -0700 : push
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/bl/1yd835n967jc3shngppdq4c00000gp/T/tmpevh5Jt/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  546 Oct 24 13:46 __GIT_HISTORY
+drwxr-xr-x  8 deepthought  deepthought  272 Oct 24 13:46 ft_list_foreach
+
+/var/folders/bl/1yd835n967jc3shngppdq4c00000gp/T/tmpevh5Jt/user/ft_list_foreach:
+total 56
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 24 13:46 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  4096 Oct 24 13:46 ._.DS_Store
+-rw-r--r--  1 deepthought  deepthought  4096 Oct 24 13:46 ._ft_list.h
+-rw-r--r--  1 deepthought  deepthought  4096 Oct 24 13:46 ._ft_list_foreach.c
+-rw-r--r--  1 deepthought  deepthought  1106 Oct 24 13:46 ft_list.h
+-rw-r--r--  1 deepthought  deepthought  1082 Oct 24 13:46 ft_list_foreach.c
+ 
+= ft_list_foreach ==============================================================
+$> gcc -Wextra -Wall -Werror main.c ft_list_foreach.c -o user_exe 
+ft_list_foreach.c:22:8: error: use of undeclared identifier 'list_ptr'
+                (*f)(list_ptr->data);
+                     ^
+1 error generated.
+
+Could not compile 'user_exe'
+Grade: 0
+
+= Final grade: 0 ===============================================================
