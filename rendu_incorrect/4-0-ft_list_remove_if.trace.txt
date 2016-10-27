@@ -1,0 +1,51 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z1r4p15.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Tue Oct 25 09:12:51 PDT 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/exam_20161025/dtse
+
+= Git history ==================================================================
+$> git -C /var/folders/j_/2b9q47n94rn8ngtpbj567kr00000gp/T/tmp0Mc2up/user log --pretty='%H - %an, %ad : %s'
+44451b0c987bb21183769b2d182ee5cb4215db44 - Exam 42, Tue Oct 25 09:12:27 2016 -0700 : push
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/j_/2b9q47n94rn8ngtpbj567kr00000gp/T/tmp0Mc2up/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  310 Oct 25 09:12 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought  136 Oct 25 09:12 ft_list_remove_if
+
+/var/folders/j_/2b9q47n94rn8ngtpbj567kr00000gp/T/tmp0Mc2up/user/ft_list_remove_if:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Oct 25 09:12 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1302 Oct 25 09:12 ft_list_remove_if.c
+ 
+= ft_list_remove_if ============================================================
+$> gcc -Wextra -Wall -Werror ft_list_remove_if.c ft_create_elem.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./vo2346974jd5zbtximimhjlq 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./87cg4l8ztf3fyy0zy7o9m0qo "dWhXjGnaK4N5i"
+Command './87cg4l8ztf3fyy0zy7o9m0qo "dWhXjGnaK4N5i"' got killed by a Segmentation fault (Signal -11)
+Grade: 0
+
+= Final grade: 0 ===============================================================
