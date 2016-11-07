@@ -1,0 +1,72 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r7p23.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Sun Nov  6 23:48:54 PST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161107/dtse3
+
+= Git history ==================================================================
+$> git -C /var/folders/fm/r0whgndd4b54w3mskkpj75dw0000gp/T/tmpGqDVON/user log --pretty='%H - %an, %ad : %s'
+20ff4df93adb7a1a332778043f79bcd4fe7b9bd6 - tsetsefly, Sun Nov 6 23:48:34 2016 -0800 : push
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/fm/r0whgndd4b54w3mskkpj75dw0000gp/T/tmpGqDVON/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  251 Nov  6 23:48 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov  6 23:48 ft_itoa_base
+
+/var/folders/fm/r0whgndd4b54w3mskkpj75dw0000gp/T/tmpGqDVON/user/ft_itoa_base:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2225 Nov  6 23:48 ft_itoa_base.c
+ 
+= ft_itoa_base =================================================================
+$> gcc -Wextra -Wall -Werror ft_itoa_base.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./lb0qtoirevd35woehcvhe8ie 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./zjd2xaqntlr46nypqltw6mt9 "21" "2313" "12"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./rpaddm18hg5iosqd4xaf1jma "2147483647" "10"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./brkzsk8xcn0goj354ctde57z "-2147483648" "10"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./b5bgcvh3rblzgig75h7abif4 "0" "2"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2016-11-06 23:49:01.000000000 -0800$
++++ test5.output	2016-11-06 23:49:01.000000000 -0800$
+@@ -1 +1 @@$
+-$
++0$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

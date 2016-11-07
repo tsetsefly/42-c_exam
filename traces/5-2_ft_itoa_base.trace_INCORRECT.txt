@@ -1,0 +1,84 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r9p7.42.us.org
+Darwin 15.6.0 x86_64
+$> date
+Mon Nov  7 00:00:35 PST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.31)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20161107/dtse4
+
+= Git history ==================================================================
+$> git -C /var/folders/6d/yl6nvwzd4hsfn0qv734r77lh0000gp/T/tmpSYmRpd/user log --pretty='%H - %an, %ad : %s'
+5d4dba517fbc5f54e0c33ddf864f97e26e903d42 - tsetsefly, Sun Nov 6 23:59:20 2016 -0800 : push
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/6d/yl6nvwzd4hsfn0qv734r77lh0000gp/T/tmpSYmRpd/user
+total 32
+-rw-r--r--  1 deepthought  deepthought  6148 Nov  7 00:00 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  4096 Nov  7 00:00 ._.DS_Store
+-rw-r--r--  1 deepthought  deepthought   354 Nov  7 00:00 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Nov  7 00:00 ft_itoa_base
+
+/var/folders/6d/yl6nvwzd4hsfn0qv734r77lh0000gp/T/tmpSYmRpd/user/ft_itoa_base:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2292 Nov  7 00:00 ft_itoa_base.c
+ 
+= ft_itoa_base =================================================================
+$> gcc -Wextra -Wall -Werror ft_itoa_base.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./1ny17v3dzxz5221yw9rd80rl 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./2s6lyr02axsf0qc30y47dzbk "21" "2313" "12"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./vrjtul8iqx0s3hkco3v6s9sa "2147483647" "10"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./6hh2j4gyfcl0lle2cj87z01e "-2147483648" "10"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./bj5mdqnl0gszyarcsqe1nd6b "0" "2"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./8xmvysml8i0uwujbsqm67ln7 "--223" "10"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./676saq13dro5urufaqt1wdhl "1123318045" "13"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+--- user_output_test7	2016-11-07 00:00:39.000000000 -0800$
++++ test7.output	2016-11-07 00:00:39.000000000 -0800$
+@@ -1 +1 @@$
+-14b956445$
++14B956445$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
