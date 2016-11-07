@@ -42,25 +42,27 @@ char	*ft_itoa_base(int value, int base)
 	int neg = 0;
 	int rem;
 	char *str;
+	long num;
 
+	num = value;
 	str = (char *)malloc(sizeof(char) * 35);
-	if (value == 0)
+	if (num == 0)
 	{
 		str[i++] = 0;
 		str[i] = '\0';
 		return (str);
 	}
-	if (value < 0)
+	if (num < 0)
 	{
-		value *= -1;
+		num *= -1;
 		if (base == 10)
 			neg = 1;
 	}
-	while (value != 0)
+	while (num != 0)
 	{
-		rem = value % base;
+		rem = num % base;
 		str[i++] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
-		value /= base;
+		num /= base;
 	}
 	if (neg)
 		str[i++] = '-';
@@ -70,10 +72,11 @@ char	*ft_itoa_base(int value, int base)
 
 // int main () // REMOVE!!!
 // {
-// 	printf("Base 10: 1567  = %s [1567]\n", ft_itoa_base(1567, 10));
-// 	printf("Base 10: -1567 = %s [-1567]\n", ft_itoa_base(-1567, 10));
-// 	printf("Base 2:  1567  = %s [11000011111]\n", ft_itoa_base(1567, 2));
-// 	printf("Base 8: 1567   = %s [3037]\n", ft_itoa_base(1567, 8));
-// 	printf("Base 16: 1567  = %s [61f]\n", ft_itoa_base(1567, 16));
+// 	printf("Base 10: 1567        = %s [1567]\n", ft_itoa_base(1567, 10));
+// 	printf("Base 10: -1567       = %s [-1567]\n", ft_itoa_base(-1567, 10));
+// 	printf("Base 2:  1567        = %s [11000011111]\n", ft_itoa_base(1567, 2));
+// 	printf("Base 8: 1567         = %s [3037]\n", ft_itoa_base(1567, 8));
+// 	printf("Base 16: 1567        = %s [61f]\n", ft_itoa_base(1567, 16));
+// 	printf("Base 10: -2147483648 = %s [-2147483648]\n", ft_itoa_base(-2147483648, 10));
 // 	return (0);
 // }
