@@ -13,6 +13,13 @@
 #include <stdlib.h>
 // #include <stdio.h> // REMOVE!!!
 
+// malloc + long
+// handle 0
+// handle neg
+// handle rest
+// add negative sign
+// strrev
+
 char *strrev(char *array)
 {
 	int i = 0;
